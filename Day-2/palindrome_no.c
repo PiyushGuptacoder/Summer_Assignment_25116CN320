@@ -1,34 +1,27 @@
 #include <stdio.h>
-#include <math.h>
-int no_of_digit(int n1){
-    int count =0;
-    while(n1>0){
-        n1/=10;
-        count++;
+int reverse_no(int n1){
+    int r;
+    int rev=0;
+    while (n1>0){
+        r=n1%10;
+        n1=n1/10;
+        rev=rev*10+r;
     }
-    return count;
-}
-int check_palindrome(int n2,int n){
-    int r,n3=0;
-
-    while(n2>0){
-        r=n2%10;
-        // printf("r%d",r);
-        n2/=10;
-        n3=n3+pow(r,no_of_digit(n));
-        }
-        return n3;
+    return rev;
 }
 int main(){
-    int n;
-    printf("Enter the number to check it is palindrome or not: ");
+    int n,r;
+    int rev=0;
+    printf("enter the no to check it is palindrome or not: ");
     scanf("%d",&n);
-   
-    if (check_palindrome(n,n)==n){
+    rev=reverse_no(n);  
+    // printf("%d",rev);
+    if (rev==n){
         printf("The given number is palindrome");
     }
     else{
         printf("The given number is not palindrome");
     }
+    return 0;
 
-}
+} 
