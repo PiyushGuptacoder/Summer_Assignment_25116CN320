@@ -4,7 +4,6 @@ int find_gcd(int a,int b){
         {int temp=a;
         a=b;
         b=temp%b;
-        find_gcd(a,b); //using recursion to find gcd
     }
     return a;
 }
