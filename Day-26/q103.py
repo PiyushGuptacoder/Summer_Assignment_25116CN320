@@ -28,7 +28,7 @@ while True:
     print("1. Check Balance ")
     print("2. Deposite ")
     print("3. Withdrawl ")
-    print("4. Transaction Status ")
+    # print("4. Transaction Status ")
     print("5. Exit ")
     choice=int(input("Enter your choice: "))
     if choice==1:
@@ -37,7 +37,7 @@ while True:
         deposite(balance)
     elif choice ==3:
         withdrawl(balance)
-    elif choice==4:
-        trans_sta(balance)
+    # elif choice==4:
+    #     trans_sta(balance)
     elif choice==5:
         exit()
