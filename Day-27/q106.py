@@ -23,7 +23,7 @@ def add_emp(name,empid,dep,salary,doj):
         save_to_csv()
         print("Employee added successfully")
 def del_emp(empid):
-    load_from_csv()
+
     if empid not in employee:
         print("Employee not found")
     else:
